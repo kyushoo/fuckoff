@@ -22,7 +22,7 @@ module.exports.run = async function ({ api, event, args }) {
   try {
     const prompt = args.join(" ");
     if (!prompt) {
-      await api.sendMessage("🟢ᗩƐᔕƬHƐᖇ⚪- ˕ •マ:\n━━━━━━━━━━━\n /)___/)    ♡\n꒰ ˶• ༝ - ˶꒱ \n./づ~🍱", event.threadID);
+      await api.sendMessage("🌊ᗩƐᔕƬHƐᖇ🌊- ˕ •マ:\n━━━━━━━━━━━\n /)___/)    ♡\n꒰ ˶• ༝ - ˶꒱ \n./づ~🍜", event.threadID);
       return;
     }
     const response = await axios.get(`https://sandipbaruwal.onrender.com/gpt?prompt=${encodeURIComponent(prompt)}`);
@@ -37,7 +37,7 @@ module.exports.run = async function ({ api, event, args }) {
       }
     }
 
-    await api.sendMessage(`🟢ᗩƐᔕƬHƐᖇ⚪- ˕ •マ:\n━━━━━━━━━━━\n${formattedAnswer} 🟡`, event.threadID);
+    await api.sendMessage(`🌊ᗩƐᔕƬHƐᖇ⚪🌊- ˕ •マ:\n━━━━━━━━━━━\n${formattedAnswer} ⚡`, event.threadID);
   } catch (error) {
     console.error("Error:", error.message);
   }
