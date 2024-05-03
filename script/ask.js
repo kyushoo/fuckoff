@@ -14,7 +14,7 @@ module.exports.config = {
   description: "AI",
   hasPrefix: false,
   usages: "{pn} [prompt]",
-  aliases: ["ai2", "bot"],
+  aliases: ["ai2", "anja"],
   cooldown: 0,
 };
 
@@ -22,7 +22,7 @@ module.exports.run = async function ({ api, event, args }) {
   try {
     const prompt = args.join(" ");
     if (!prompt) {
-      await api.sendMessage("🌊ᗩƐᔕƬHƐᖇ🌊- ˕ •マ:\n━━━━━━━━━━━\n /)___/)    ♡\n꒰ ˶• ༝ - ˶꒱ \n./づ~🍜", event.threadID);
+      await api.sendMessage("🟢 ᗩƐᔕƬHƐᖇ ⚪:\n━━━━━━━━━━━\n /)___/)    ♡\n꒰ ˶• ༝ - ˶꒱ \n./づ~🍿", event.threadID);
       return;
     }
     const response = await axios.get(`https://sandipbaruwal.onrender.com/gpt?prompt=${encodeURIComponent(prompt)}`);
