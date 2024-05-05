@@ -7,7 +7,7 @@ module.exports.config = {
   aliases: ['gpt', 'openai'],
   description: "An AI command powered by GPT-4",
   usage: "Ai [promot]",
-  credits: 'Developer',
+  credits: '𝗮𝗲𝘀𝘁𝗵𝗲𝗿',
   cooldown: 3,
 };
 module.exports.run = async function({
@@ -17,10 +17,10 @@ module.exports.run = async function({
 }) {
   const input = args.join(' ');
   if (!input) {
-    api.sendMessage(`oui je suis là pose ta question...🧘🏽‍♂️'`, event.threadID, event.messageID);
+    api.sendMessage(`♡   ∩_∩\n    （„• ֊ •„)♡\n┏━∪∪━━━━ღ❦ღ┓`, event.threadID, event.messageID);
     return;
   }
-  api.sendMessage(`🧠🔍 "${input}"`, event.threadID, event.messageID);
+  api.sendMessage(``, event.threadID, event.messageID);
   try {
     const {
       data
