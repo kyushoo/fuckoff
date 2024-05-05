@@ -26,7 +26,7 @@ module.exports.run = async function({
       data
     } = await axios.get(`https://soyeon-gpt4.onrender.com/api?prompt=${encodeURIComponent(input)}`);
     const response = data.response;
-    api.sendMessage(response + '\n\n══════════════════\n https://auto-bot-by-ronald-sory.onrender.com', event.threadID, event.messageID);
+    api.sendMessage('♡   ∩_∩\n    （„• ֊ •„)♡\n┏━∪∪━━━━ღ❦ღ┓\n🌐['+ response +'] ♡\n♡   𝘢𝘦𝘴𝘵𝘩𝘦𝘳-[📩]\n┗ღ❦ღ━━━━━━━┛\n[✦]|𝗚𝗣𝗧-𝟰 ', event.threadID, event.messageID);
   } catch (error) {
     api.sendMessage('An error occurred while processing your request.', event.threadID, event.messageID);
   }
