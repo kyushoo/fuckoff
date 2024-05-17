@@ -40,10 +40,10 @@ module.exports.run = async function ({ api, event, args }) {
         apiName = 'Backup Axios';
     }
 
-    if (!content) return api.sendMessage("Please provide your question.\n\nExample: ai what is the solar system?", event.threadID, event.messageID);
+    if (!content) return api.sendMessage("🏖️〽️ᗩƐ-ᔕƬHƐᖇ〽️🏖️\n\nHello Dummy ✌️?", event.threadID, event.messageID);
 
     try {
-        api.sendMessage(`🏖️〽️ᗩƐ-ᔕƬHƐᖇ〽️🏖️\n\n Hello Dummy 🍿? `, event.threadID, event.messageID);
+        api.sendMessage(``, event.threadID, event.messageID);
 
         const response = await axios.get(apiUrl);
         const result = isPrimaryApiStable ? response.data.response : response.data.message;
@@ -61,7 +61,7 @@ module.exports.run = async function ({ api, event, args }) {
         const totalRequestCount = await getTotalRequestCount();
         const userNames = await getUserNames(api, uid);
 
-        const responseMessage = `♡   ∩_∩\n    （„• ֊ •„)♡\n┏━∪∪━━━━ღ❦ღ┓\n${result} ≛\n🏖️〽️ᗩƐ-ᔕƬHƐᖇ〽️🏖️-[📩]\n┗ღ❦ღ━━━━━━━┛\n[✦]| ${userNames.join(', ')}`;
+        const responseMessage = `♡   ∩_∩\n    （„• ֊ •„)♡\n┏━∪∪━━━━ღ❦ღ┓\n${result} ≛\n♡  ᗩƐ-ᔕƬHƐᖇ-[📩]\n┗ღ❦ღ━━━━━━━┛\n[✦]| ${userNames.join(', ')}`;
         api.sendMessage(responseMessage, event.threadID, event.messageID);
 
         await saveAxiosStatus(apiName);
