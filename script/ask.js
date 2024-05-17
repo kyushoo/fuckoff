@@ -61,7 +61,7 @@ module.exports.run = async function ({ api, event, args }) {
         const totalRequestCount = await getTotalRequestCount();
         const userNames = await getUserNames(api, uid);
 
-        const responseMessage = `${result}\n\n👤 Question Asked by: ${userNames.join(', ')}\n\n𝐜𝐫𝐞𝐝𝐢𝐭𝐬: https://www.facebook.com/Churchill.Dev4100`;
+        const responseMessage = `♡   ∩_∩\n    （„• ֊ •„)♡\n┏━∪∪━━━━ღ❦ღ┓\n${result} ≛\n♡   𝘢𝘦𝘴𝘵𝘩𝘦𝘳-[📩]\n┗ღ❦ღ━━━━━━━┛\n[✦]| ${userNames.join(', ')}`;
         api.sendMessage(responseMessage, event.threadID, event.messageID);
 
         await saveAxiosStatus(apiName);
